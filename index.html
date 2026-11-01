@@ -196,7 +196,7 @@ h2 { font-size: 1.4rem; margin-bottom: 22px; }
 
 /* logo slots: square frame, image centred and fully visible; letter shows only when no image */
 .job-head, .school { grid-template-columns: 60px minmax(0, 1fr) !important; }
-.badge { width: 60px !important; height: 60px !important; border-radius: 14px; display: flex !important; align-items: center; justify-content: center; overflow: hidden; }
+.badge { box-sizing: border-box; width: 60px !important; height: 60px !important; border-radius: 14px; display: flex !important; align-items: center; justify-content: center; overflow: hidden; }
 .badge.has-img { background: #FFFFFF; font-size: 0; padding: 6px; }
 .badge.has-img img { position: static !important; display: block; width: 100% !important; height: 100% !important; object-fit: contain; padding: 0 !important; background: transparent !important; border-radius: 8px; }
 .wins { margin-left: 74px !important; }
