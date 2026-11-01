@@ -193,6 +193,20 @@ h2 { font-size: 1.4rem; margin-bottom: 22px; }
 .xhs-post:hover img, .xhs-post:focus-visible img { transform: translateY(-3px) scale(1.03); box-shadow: 0 0 0 1.5px var(--sakura-ink), 0 14px 26px -16px rgba(194, 96, 127, .6); }
 .xhs-grid figcaption { font-size: .78rem; font-weight: 700; text-align: center; color: var(--sakura-ink); }
 @media (max-width: 420px) { .xhs-grid { padding: 10px; gap: 8px; } }
+
+/* logo slots: same height for every logo, width follows the logo's own shape */
+.job-head, .school { grid-template-columns: 112px minmax(0, 1fr) !important; }
+.badge { width: 48px !important; height: 48px !important; border-radius: 12px; justify-self: start; }
+.badge.has-img { width: auto !important; max-width: 112px; padding: 6px 8px; background: #FFFFFF; color: transparent; }
+.badge.has-img img { position: static !important; display: block; height: 100% !important; width: auto !important; max-width: 96px; object-fit: contain; padding: 0 !important; background: transparent !important; }
+.wins { margin-left: 126px !important; }
+@media (max-width: 520px) {
+  .wins { margin-left: 0 !important; }
+  .job-head, .school { grid-template-columns: 88px minmax(0, 1fr) !important; }
+  .badge { width: 42px !important; height: 42px !important; }
+  .badge.has-img { max-width: 88px; }
+  .badge.has-img img { max-width: 72px; }
+}
 </style>
 <style>img{max-width:100%}[hidden]{display:none!important}body{margin:0}</style>
 </head>
@@ -232,7 +246,7 @@ h2 { font-size: 1.4rem; margin-bottom: 22px; }
 
     <article class="job">
       <div class="job-head">
-        <span class="badge" aria-hidden="true"><img src="logos/okx.svg" alt="" onerror="if(!this.dataset.png){this.dataset.png='1';this.src=this.src.replace(/\.svg$/,'.png');}else{this.remove();}">O</span>
+        <span class="badge" aria-hidden="true"><img onload="this.parentNode.classList.add('has-img')" src="logos/okx.svg" alt="" onerror="if(!this.dataset.png){this.dataset.png='1';this.src=this.src.replace(/\.svg$/,'.png');}else{this.remove();}">O</span>
         <div><h3><a class="co-link" href="https://www.okx.com" target="_blank" rel="noopener">OKX<svg class="ext" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5H2.5v7h7v-2M7 2.5h2.5V5M9.5 2.5 5.5 6.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a></h3><p class="meta">Senior Product Manager, Funds Infrastructure<br>Jun 2025 – Sep 2026 | Hong Kong</p></div>
       </div>
       <ul class="wins">
@@ -247,7 +261,7 @@ h2 { font-size: 1.4rem; margin-bottom: 22px; }
 
     <article class="job">
       <div class="job-head">
-        <span class="badge" aria-hidden="true"><img src="logos/hashkey.svg" alt="" onerror="if(!this.dataset.png){this.dataset.png='1';this.src=this.src.replace(/\.svg$/,'.png');}else{this.remove();}">H</span>
+        <span class="badge" aria-hidden="true"><img onload="this.parentNode.classList.add('has-img')" src="logos/hashkey.svg" alt="" onerror="if(!this.dataset.png){this.dataset.png='1';this.src=this.src.replace(/\.svg$/,'.png');}else{this.remove();}">H</span>
         <div><h3><a class="co-link" href="https://www.hashkey.com" target="_blank" rel="noopener">HashKey<svg class="ext" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5H2.5v7h7v-2M7 2.5h2.5V5M9.5 2.5 5.5 6.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a></h3><p class="meta">Senior Trading Product Manager<br>May 2024 – Jun 2025 | Hong Kong</p></div>
       </div>
       <ul class="wins">
@@ -260,7 +274,7 @@ h2 { font-size: 1.4rem; margin-bottom: 22px; }
 
     <article class="job">
       <div class="job-head">
-        <span class="badge" aria-hidden="true"><img src="logos/bitget.svg" alt="" onerror="if(!this.dataset.png){this.dataset.png='1';this.src=this.src.replace(/\.svg$/,'.png');}else{this.remove();}">B</span>
+        <span class="badge" aria-hidden="true"><img onload="this.parentNode.classList.add('has-img')" src="logos/bitget.svg" alt="" onerror="if(!this.dataset.png){this.dataset.png='1';this.src=this.src.replace(/\.svg$/,'.png');}else{this.remove();}">B</span>
         <div><h3><a class="co-link" href="https://www.bitget.com" target="_blank" rel="noopener">Bitget<svg class="ext" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5H2.5v7h7v-2M7 2.5h2.5V5M9.5 2.5 5.5 6.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a></h3><p class="meta">Senior Trading Product Manager / Strategy-Order Lead<br>Jun 2023 – Mar 2024 | Hong Kong</p></div>
       </div>
       <ul class="wins">
@@ -271,7 +285,7 @@ h2 { font-size: 1.4rem; margin-bottom: 22px; }
 
     <article class="job">
       <div class="job-head">
-        <span class="badge" aria-hidden="true"><img src="logos/okx.svg" alt="" onerror="if(!this.dataset.png){this.dataset.png='1';this.src=this.src.replace(/\.svg$/,'.png');}else{this.remove();}">O</span>
+        <span class="badge" aria-hidden="true"><img onload="this.parentNode.classList.add('has-img')" src="logos/okx.svg" alt="" onerror="if(!this.dataset.png){this.dataset.png='1';this.src=this.src.replace(/\.svg$/,'.png');}else{this.remove();}">O</span>
         <div><h3><a class="co-link" href="https://www.okx.com" target="_blank" rel="noopener">OKX<svg class="ext" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5H2.5v7h7v-2M7 2.5h2.5V5M9.5 2.5 5.5 6.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a></h3><p class="meta">Product Manager, Strategy-Order System<br>Jun 2022 – Jun 2023 | Hong Kong</p></div>
       </div>
       <ul class="wins">
@@ -306,8 +320,8 @@ h2 { font-size: 1.4rem; margin-bottom: 22px; }
   <section class="extra" id="education" aria-labelledby="edu-title">
     <h2 id="edu-title">Education</h2>
     <div class="schools">
-      <div class="school"><span class="badge" aria-hidden="true"><img src="logos/hkust.svg" alt="" onerror="if(!this.dataset.png){this.dataset.png='1';this.src=this.src.replace(/\.svg$/,'.png');}else{this.remove();}">H</span><div class="school-body"><h3><a class="co-link" href="https://hkust.edu.hk" target="_blank" rel="noopener">HKUST<svg class="ext" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5H2.5v7h7v-2M7 2.5h2.5V5M9.5 2.5 5.5 6.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a></h3><p class="meta">MSc in Technology Leadership and Entrepreneurship<br>2019 – 2022 | Hong Kong</p><p class="award"><span class="award-star" aria-hidden="true">✦</span>Full scholarship, HK$400,000</p><p class="sub">Twice awarded the HKUST Entrepreneurship Acceleration Fund (2021). Coursework in dynamic pricing, management, search engine development and cryptography.</p><a class="go" href="https://cse.hkust.edu.hk/blockchain/index.html" target="_blank" rel="noopener">Blockchain research group at HKUST CSE</a></div></div>
-      <div class="school"><span class="badge" aria-hidden="true"><img src="logos/zju.svg" alt="" onerror="if(!this.dataset.png){this.dataset.png='1';this.src=this.src.replace(/\.svg$/,'.png');}else{this.remove();}">Z</span><div class="school-body"><h3><a class="co-link" href="https://www.zju.edu.cn/english/" target="_blank" rel="noopener">Zhejiang University<svg class="ext" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5H2.5v7h7v-2M7 2.5h2.5V5M9.5 2.5 5.5 6.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a></h3><p class="meta">BA in German; Chu Kochen Honors College (ITP)<br>2015 – 2019 | Hangzhou</p><p class="sub">Top 1% in Advanced Mathematics. Gold Award, 2018 National “Internet+” Innovation and Entrepreneurship Competition, ranked first among 10,000 entries.</p><p class="sub">First prize nationwide, L’Oréal “True Love” Campus Charity Sale (2017): sold RMB 440,000 of goods in four days and donated the full RMB 380,000 profit to students in need at Zhejiang University.</p></div></div>
+      <div class="school"><span class="badge" aria-hidden="true"><img onload="this.parentNode.classList.add('has-img')" src="logos/hkust.svg" alt="" onerror="if(!this.dataset.png){this.dataset.png='1';this.src=this.src.replace(/\.svg$/,'.png');}else{this.remove();}">H</span><div class="school-body"><h3><a class="co-link" href="https://hkust.edu.hk" target="_blank" rel="noopener">HKUST<svg class="ext" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5H2.5v7h7v-2M7 2.5h2.5V5M9.5 2.5 5.5 6.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a></h3><p class="meta">MSc in Technology Leadership and Entrepreneurship<br>2019 – 2022 | Hong Kong</p><p class="award"><span class="award-star" aria-hidden="true">✦</span>Full scholarship, HK$400,000</p><p class="sub">Twice awarded the HKUST Entrepreneurship Acceleration Fund (2021). Coursework in dynamic pricing, management, search engine development and cryptography.</p><a class="go" href="https://cse.hkust.edu.hk/blockchain/index.html" target="_blank" rel="noopener">Blockchain research group at HKUST CSE</a></div></div>
+      <div class="school"><span class="badge" aria-hidden="true"><img onload="this.parentNode.classList.add('has-img')" src="logos/zju.svg" alt="" onerror="if(!this.dataset.png){this.dataset.png='1';this.src=this.src.replace(/\.svg$/,'.png');}else{this.remove();}">Z</span><div class="school-body"><h3><a class="co-link" href="https://www.zju.edu.cn/english/" target="_blank" rel="noopener">Zhejiang University<svg class="ext" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5H2.5v7h7v-2M7 2.5h2.5V5M9.5 2.5 5.5 6.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a></h3><p class="meta">BA in German; Chu Kochen Honors College (ITP)<br>2015 – 2019 | Hangzhou</p><p class="sub">Top 1% in Advanced Mathematics. Gold Award, 2018 National “Internet+” Innovation and Entrepreneurship Competition, ranked first among 10,000 entries.</p><p class="sub">First prize nationwide, L’Oréal “True Love” Campus Charity Sale (2017): sold RMB 440,000 of goods in four days and donated the full RMB 380,000 profit to students in need at Zhejiang University.</p></div></div>
     </div>
   </section>
 
