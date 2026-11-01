@@ -194,18 +194,16 @@ h2 { font-size: 1.4rem; margin-bottom: 22px; }
 .xhs-grid figcaption { font-size: .78rem; font-weight: 700; text-align: center; color: var(--sakura-ink); }
 @media (max-width: 420px) { .xhs-grid { padding: 10px; gap: 8px; } }
 
-/* logo slots: same height for every logo, width follows the logo's own shape */
-.job-head, .school { grid-template-columns: 112px minmax(0, 1fr) !important; }
-.badge { width: 48px !important; height: 48px !important; border-radius: 12px; justify-self: start; }
-.badge.has-img { width: auto !important; max-width: 112px; padding: 6px 8px; background: #FFFFFF; color: transparent; }
-.badge.has-img img { position: static !important; display: block; height: 100% !important; width: auto !important; max-width: 96px; object-fit: contain; padding: 0 !important; background: transparent !important; }
-.wins { margin-left: 126px !important; }
+/* logo slots: square frame, image centred and fully visible; letter shows only when no image */
+.job-head, .school { grid-template-columns: 60px minmax(0, 1fr) !important; }
+.badge { width: 60px !important; height: 60px !important; border-radius: 14px; display: flex !important; align-items: center; justify-content: center; overflow: hidden; }
+.badge.has-img { background: #FFFFFF; font-size: 0; padding: 6px; }
+.badge.has-img img { position: static !important; display: block; width: 100% !important; height: 100% !important; object-fit: contain; padding: 0 !important; background: transparent !important; border-radius: 8px; }
+.wins { margin-left: 74px !important; }
 @media (max-width: 520px) {
   .wins { margin-left: 0 !important; }
-  .job-head, .school { grid-template-columns: 88px minmax(0, 1fr) !important; }
-  .badge { width: 42px !important; height: 42px !important; }
-  .badge.has-img { max-width: 88px; }
-  .badge.has-img img { max-width: 72px; }
+  .job-head, .school { grid-template-columns: 48px minmax(0, 1fr) !important; }
+  .badge { width: 48px !important; height: 48px !important; }
 }
 </style>
 <style>img{max-width:100%}[hidden]{display:none!important}body{margin:0}</style>
